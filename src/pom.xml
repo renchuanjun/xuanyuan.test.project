@@ -13,6 +13,12 @@
         <module>xuanyuan-service-basis</module>
         <module>xuanyuan-jpa-basis</module>
         <module>xuanyuan-utils</module>
+
+        <module>xuanyuan-client-demo</module>
+        <module>xuanyuan-service-demo</module>
+        <module>xuanyuan-jpa-demo1</module>
+        <module>xuanyuan-jpa-demo2</module>
+        <module>xuanyuan-jpa-demo3</module>
     </modules>
 
     <parent>
