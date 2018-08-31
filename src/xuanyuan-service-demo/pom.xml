@@ -17,7 +17,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-       
+        <dependency>
+            <groupId>test.project</groupId>
+            <artifactId>xuanyuan-service-basis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>xuanyuan-service-demo</finalName>

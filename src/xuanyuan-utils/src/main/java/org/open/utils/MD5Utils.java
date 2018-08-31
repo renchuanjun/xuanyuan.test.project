@@ -1,5 +1,6 @@
 package org.open.utils;
 
+
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 
 import java.io.ByteArrayOutputStream;
