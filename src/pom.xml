@@ -15,6 +15,10 @@
         <module>xuanyuan-model-basis</module>
         <module>xuanyuan-utils</module>
 
+        <module>xuanyuan-model-demo1</module>
+        <module>xuanyuan-model-demo2</module>
+        <module>xuanyuan-model-demo3</module>
+
         <module>xuanyuan-client-demo</module>
         <module>xuanyuan-service-demo</module>
         <module>xuanyuan-jpa-demo1</module>

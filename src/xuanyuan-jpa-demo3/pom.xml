@@ -22,6 +22,11 @@
             <artifactId>xuanyuan-jpa-basis</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>test.project</groupId>
+            <artifactId>xuanyuan-model-demo3</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>xuanyuan-jpa-demo3</finalName>
