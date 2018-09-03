@@ -19,6 +19,11 @@
     <dependencies>
         <dependency>
             <groupId>test.project</groupId>
+            <artifactId>xuanyuan-model-basis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>test.project</groupId>
             <artifactId>xuanyuan-jpa-basis</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

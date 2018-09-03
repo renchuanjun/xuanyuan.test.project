@@ -1,7 +1,9 @@
 package org.open.demo.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.open.demo.model.Hotnews2;
 
+@Mapper
 public interface Hotnews2Mapper {
     int deleteByPrimaryKey(Integer id);
 
