@@ -1,7 +1,7 @@
 package org.open.tcc.interceptor;
 
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.open.tcc.model.TransactionLocal;
+import org.open.utils.UUIDUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -18,24 +18,27 @@ public class TransactionManagerInterceptor {
 
     /**
      * 封装事务基本信息
-     * @param point
      * @return
+     * @param code
      */
-    public Object around(ProceedingJoinPoint point) throws Throwable {
+    public void around(int code) throws Throwable {
         String groupId = null;
         String mode = null;
         try {
             RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
             HttpServletRequest request = requestAttributes == null ? null : ((ServletRequestAttributes) requestAttributes).getRequest();
-            groupId = request == null ? null : request.getHeader("tx-group");
-            mode = request == null ? null : request.getHeader("tx-mode");
+            if(1 == code){
+                groupId = UUIDUtils.uuid();
+            }else{
+                groupId = request == null ? null : request.getHeader("tx-group");
+                mode = request == null ? null : request.getHeader("tx-mode");
+            }
             TransactionLocal transactionLocal = new TransactionLocal();
-            transactionLocal.setGroupId("11111111");
+            transactionLocal.setGroupId(groupId);
             TransactionLocal.setCurrent(transactionLocal);
             System.out.println("groupId :"+groupId);
             System.out.println("mode :"+mode);
+            System.out.println("提交事务组到rockmq");
         }catch (Exception e){}
-
-        return point.proceed();
     }
 }

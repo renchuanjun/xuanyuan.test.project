@@ -12,6 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TransactionRestTemplateInterceptor implements RequestInterceptor {
 
+
+
     public TransactionRestTemplateInterceptor() {
     }
 
@@ -20,5 +22,8 @@ public class TransactionRestTemplateInterceptor implements RequestInterceptor {
         TransactionLocal transactionLocal = TransactionLocal.current();
         String groupId = transactionLocal.getGroupId();
         System.out.println(groupId);
+        if (transactionLocal != null) {
+            requestTemplate.header("tx-group", groupId);
+        }
     }
 }

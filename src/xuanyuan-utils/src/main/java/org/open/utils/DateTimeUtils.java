@@ -730,4 +730,26 @@ public class DateTimeUtils {
 		return returnStr;
 
 	}
+
+	/**
+	 * 时间戳转时间
+	 * @param timestamp
+	 * @return
+	 * @throws ParseException
+	 */
+	public static Date timestampToDate(long timestamp) throws ParseException {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String d = format.format(timestamp);
+		Date date=format.parse(d);
+		return date;
+	}
+
+	/***
+	 * 时间转时间戳
+	 * @param date
+	 * @return
+	 */
+	public static long dateToTimestamp(Date date){
+		return date.getTime();
+	}
 }
