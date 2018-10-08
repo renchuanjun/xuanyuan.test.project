@@ -1,4 +1,4 @@
-package test;
+package test.io;
 
 /**
  * @author 任传君
