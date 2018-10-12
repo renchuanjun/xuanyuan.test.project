@@ -13,8 +13,8 @@
         <module>xuanyuan-service-basis</module>
         <module>xuanyuan-jpa-basis</module>
         <module>xuanyuan-model-basis</module>
-        <module>xuanyuan-tcc-core</module>
-        <module>xuanyuan-tcc-manager</module>
+        <module>xuanyuan-rpc-core</module>
+        <module>xuanyuan-rpc-manager</module>
         <module>xuanyuan-utils</module>
 
         <module>xuanyuan-model-demo1</module>

@@ -24,7 +24,7 @@
         </dependency>
         <dependency>
             <groupId>test.project</groupId>
-            <artifactId>xuanyuan-tcc-core</artifactId>
+            <artifactId>xuanyuan-rpc-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
