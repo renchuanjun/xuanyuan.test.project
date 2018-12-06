@@ -26,7 +26,7 @@ public class AppUtils {
 	 */
 	public static boolean isAjaxRequest(HttpServletRequest request) {
 		String requestType = request.getHeader("X-Requested-With");
-		if (requestType != null && requestType.equals("XMLHttpRequest")) {
+		if (requestType != null && "XMLHttpRequest".equals(requestType)) {
 			return true;
 		} else {
 			return false;
@@ -75,8 +75,9 @@ public class AppUtils {
 			outStream = new ByteArrayOutputStream();  
 	        byte[] data = new byte[1024]; 
 	        int count = -1;
-	        while((count = in.read(data,0,1024)) != -1)  
-	            outStream.write(data, 0, count);  
+	        while((count = in.read(data,0,1024)) != -1) {
+				outStream.write(data, 0, count);
+			}
 	          
 	        data = null;  
 	        zipbyte = outStream.toByteArray();

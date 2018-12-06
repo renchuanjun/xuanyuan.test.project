@@ -2,12 +2,10 @@ package org.open;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.List;
+import javax.servlet.http.*;
+
+
 
 /**
  * Created by lenovo on 2017/4/10.

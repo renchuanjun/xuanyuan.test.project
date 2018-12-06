@@ -325,8 +325,9 @@ public class ZipUtils {
 			out = new BufferedOutputStream(zos);
 			for (String s : sourcePaths) {
 				File tempf = new File(s);
-				if (!tempf.exists())
-					continue;
+				if (!tempf.exists()) {
+                    continue;
+                }
 				
 				if (tempf.isDirectory()) {   
 			           zos.putNextEntry(new ZipEntry(s + "/"));  

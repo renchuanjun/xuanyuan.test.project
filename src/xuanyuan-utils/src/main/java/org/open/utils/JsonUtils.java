@@ -123,14 +123,16 @@ public class JsonUtils {
 		//针对Integer为null返回默认值0的问题
 		jsonConfig.registerDefaultValueProcessor(Integer.class,  
 		        new DefaultValueProcessor() {  
-		            public Object getDefaultValue(Class type) {  
+		            @Override
+                    public Object getDefaultValue(Class type) {
 		                return "";  
 		            }  
 		        });
 		//针对BigDecimal为null返回默认值0.00的问题
 		jsonConfig.registerDefaultValueProcessor(BigDecimal.class,  
 		        new DefaultValueProcessor() {  
-		            public Object getDefaultValue(Class type) {  
+		            @Override
+                    public Object getDefaultValue(Class type) {
 		                return "";  
 		            }  
 		        });
@@ -138,21 +140,24 @@ public class JsonUtils {
 		//针对Boolean为null返回默认值false的问题
 		jsonConfig.registerDefaultValueProcessor(Boolean.class,  
 		        new DefaultValueProcessor() {  
-		            public Object getDefaultValue(Class type) {  
+		            @Override
+                    public Object getDefaultValue(Class type) {
 		                return "";  
 		            }  
 		        });
 		//针对Double为null返回默认值0.00的问题
 		jsonConfig.registerDefaultValueProcessor(Double.class,  
 		        new DefaultValueProcessor() {  
-		            public Object getDefaultValue(Class type) {  
+		            @Override
+                    public Object getDefaultValue(Class type) {
 		                return "";  
 		            }  
 		        });
 		//针对Float为null返回默认值0.00的问题
 		jsonConfig.registerDefaultValueProcessor(Float.class,  
 		        new DefaultValueProcessor() {  
-		            public Object getDefaultValue(Class type) {  
+		            @Override
+                    public Object getDefaultValue(Class type) {
 		                return "";  
 		            }  
 		        });

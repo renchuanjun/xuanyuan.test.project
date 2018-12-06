@@ -22,8 +22,11 @@ public class LogTextUtils {
     }  
       
     public static LogTextUtils getLogger() {
-        if(log != null) return log;  
-        else return new LogTextUtils();
+        if(log != null) {
+            return log;
+        } else {
+            return new LogTextUtils();
+        }
         
     }  
 

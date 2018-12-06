@@ -19,12 +19,14 @@ public class DateJsonValueProcessor implements JsonValueProcessor {
 		}
 	}
 
+	@Override
 	public Object processArrayValue(Object value, JsonConfig jsonConfig) {
 		return process(value);
 	}
 
+	@Override
 	public Object processObjectValue(String key, Object value,
-			JsonConfig jsonConfig) {
+									 JsonConfig jsonConfig) {
 		return process(value);
 	}
 

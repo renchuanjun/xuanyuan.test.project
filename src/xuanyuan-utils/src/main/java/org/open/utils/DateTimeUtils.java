@@ -106,7 +106,7 @@ public class DateTimeUtils {
 	public static Date getBeginSomeTime(int a) throws ParseException {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(new Date());
-		calendar.add(calendar.MONTH, -a);
+		calendar.add(Calendar.MONTH, -a);
 		return toDayStart(calendar.getTime());
 	}
 	
@@ -118,7 +118,7 @@ public class DateTimeUtils {
 	public static Date getEndSomeTime(int a) throws ParseException {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(new Date());
-		calendar.add(calendar.MONTH, +a);
+		calendar.add(Calendar.MONTH, +a);
 		return toDayEnd(calendar.getTime());
 	}
 	
@@ -365,8 +365,9 @@ public class DateTimeUtils {
 		} else if (month == 2) {
 			if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
 				return 29;
-			} else
+			} else {
 				return 28;
+			}
 		} else {
 			return 30;
 		}

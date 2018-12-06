@@ -101,8 +101,9 @@ public class ExcelUtils {
 			
 			//创建相应的文件
 			File file = new File(expFilePath);
-			if (!file.isDirectory()) 
-				file.createNewFile();
+			if (!file.isDirectory()) {
+                file.createNewFile();
+            }
 			
 			// 输出流
 			os = new FileOutputStream(expFilePath);
@@ -110,8 +111,9 @@ public class ExcelUtils {
 			// 创建第一个sheet页
 			Sheet sheet = book.createSheet(sheetName);
 			int count = list.size();
-			if (list == null || count == 0) 
-				return null;
+			if (list == null || count == 0) {
+                return null;
+            }
 			
 			for (int i = 0; i < count; i++) {
 				List<String> subList = list.get(i);

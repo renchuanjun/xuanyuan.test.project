@@ -9,7 +9,6 @@
         <module>xuanyuan-gateway</module>
         <module>xuanyuan-eureka</module>
         <module>xuanyuan-client-basis</module>
-        <module>xuanyuan-config</module>
         <module>xuanyuan-service-basis</module>
         <module>xuanyuan-jpa-basis</module>
         <module>xuanyuan-model-basis</module>

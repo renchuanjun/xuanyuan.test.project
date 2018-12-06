@@ -36,7 +36,7 @@ public class FindHead {
 				for (int i = 0; i < colNum; i++) {
 					//循环第一列，获取表头-即属性名
 					Cell ce = firstrow.getCell(i);
-					 if (ce.toString().equals("指标名称")) {
+					 if ("指标名称".equals(ce.toString())) {
 						 for (int j =1; j < totalRows+1; j++) {
 							String	 head = sheet.getRow(j).getCell(i).toString()+"|";
 							heads += head;
