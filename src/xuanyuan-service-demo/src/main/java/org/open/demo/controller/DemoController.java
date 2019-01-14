@@ -19,7 +19,15 @@ public class DemoController extends BaseController {
 
     @ResponseBody
     @RequestMapping(value = "/getdemo", method = RequestMethod.POST)
-    public XYResult<Object> demo(Integer id){
+    public XYResult<Object> demo(@RequestBody String name){
+        XYResult<Object> xyResult = new XYResult<>();
+        xyResult.setResult("服务端" + name);
+        return xyResult;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/getdemoid", method = RequestMethod.POST)
+    public XYResult<Object> demoId(Integer id){
         XYResult<Object> xyResult = this.demoService.getDemo(id);
         return xyResult;
     }

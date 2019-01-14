@@ -10,7 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableEurekaClient
 @SpringBootApplication
 @EnableFeignClients //注解开启Feign功能
-@EnableAutoConfiguration
 @EnableConfigurationProperties({ConfigProperties.class})
 public class DemoClientApplication {
     public static void main(String[] args) {
