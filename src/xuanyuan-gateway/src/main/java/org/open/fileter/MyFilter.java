@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
  * @create 2018-08-30 14:42
  **/
 
-//@Component 实现filter 双向过滤 与 构造方法不并存
+@Component //实现filter 双向过滤 与 构造方法不并存
 public class MyFilter implements GlobalFilter, Ordered {
     //创建构造方法 实现fiter单项请求过滤
     public MyFilter() {
