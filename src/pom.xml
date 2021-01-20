@@ -25,6 +25,7 @@
         <module>xuanyuan-jpa-demo1</module>
         <module>xuanyuan-jpa-demo2</module>
         <module>xuanyuan-jpa-demo3</module>
+        <module>xuanyuan-job</module>
     </modules>
 
     <parent>
